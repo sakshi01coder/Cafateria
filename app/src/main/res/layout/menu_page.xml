@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background_image"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Title -->
+        <TextView
+            android:layout_marginTop="80dp"
+            android:id="@+id/categoryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 😋 Check Out Our Menu 🍽️!"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#663399"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Buttons for Menu Categories -->
+        <Button
+            android:id="@+id/btnBreakfast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Breakfast"
+            android:backgroundTint="#663399"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnStarters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Starters"
+            android:backgroundTint="#663399"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnMainCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Main Course"
+            android:backgroundTint="#663399"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnDessert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#663399"
+            android:text="Dessert"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnBeverages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Beverages"
+            android:backgroundTint="#663399"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

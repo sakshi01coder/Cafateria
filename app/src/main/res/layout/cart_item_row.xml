@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="12dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/background_image">
+
+    <TextView
+        android:id="@+id/itemNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Item Name"
+        android:textColor="#663399"/>
+
+    <TextView
+        android:id="@+id/itemPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="₹100.00"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/itemQuantityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="Qty: 1"
+        android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/removeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        android:backgroundTint="#663399"
+        android:layout_marginStart="16dp" />
+
+</LinearLayout>

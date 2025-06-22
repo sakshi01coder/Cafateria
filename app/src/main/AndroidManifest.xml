@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Cafeteria"
+        tools:targetApi="31">
+
+        <!-- Register AuthActivity and make it the launcher -->
+        <activity
+            android:name=".AuthActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Keep MainActivity registered for future navigation -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".MenuActivity"/>
+        <activity android:name=".BreakfastActivity"/>
+        <activity android:name=".StartersActivity"/>
+        <activity android:name=".MainCourseActivity"/>
+        <activity android:name=".DessertActivity"/>
+        <activity android:name=".BeveragesActivity"/>
+        <activity android:name=".CartActivity"/>
+        <activity android:name=".ShoppingCart"/>
+        <activity android:name=".ImageSliderAdapter"/>
+        <activity android:name=".PaymentActivity"/>
+        <activity android:name=".OrderConfirmationActivity"/>
+
+
+
+
+
+    </application>
+
+
+
+</manifest>

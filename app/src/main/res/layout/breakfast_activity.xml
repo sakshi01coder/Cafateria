@@ -1,0 +1,703 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background_image">
+
+    <!-- 🔍 Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search breakfast items..."
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:padding="12dp"
+        android:background="@color/white"
+        android:layout_marginBottom="12dp" />
+
+    <!-- 🧾 List of Breakfast Items -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/breakfastItemList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <!-- 🍽️ Single Item Block -->
+            <LinearLayout
+                android:id="@+id/layoutItem1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"
+
+                android:elevation="2dp">
+
+                <!-- Food Image -->
+                <ImageView
+                    android:id="@+id/itemImage1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/vadapav"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- Info & Quantity Controls -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/itemName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vada Pav"
+                        android:textColor="#663399"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/itemPrice1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹15"
+                        android:textColor="#666"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Quantity Buttons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <Button
+                            android:id="@+id/btnMinus1"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="-"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>
+
+                        <TextView
+                            android:id="@+id/quantityText1"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <Button
+                            android:id="@+id/btnPlus1"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="+"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>
+
+
+                    </LinearLayout>
+                    <!-- 🛒 Add to Cart Button -->
+                    <Button
+                        android:id="@+id/btnAddToCart1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#4CAF50"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="0dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 🔁 Repeat above block for other items like Idli, Poha, etc. -->
+            <!-- 🍽️ Single Item Block -->
+            <LinearLayout
+                android:id="@+id/layoutItem2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"
+
+                android:elevation="2dp">
+
+                <!-- Food Image -->
+                <ImageView
+                    android:id="@+id/itemImage2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/samosa"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- Info & Quantity Controls -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/itemName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Samosa"
+                        android:textColor="#663399"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/itemPrice2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹17"
+                        android:textColor="#666"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Quantity Buttons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <Button
+                            android:id="@+id/btnMinus2"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="-"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>/>
+
+                        <TextView
+                            android:id="@+id/quantityText2"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <Button
+                            android:id="@+id/btnPlus2"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:backgroundTint="#663399"/>/>
+                    </LinearLayout>
+                    <!-- 🛒 Add to Cart Button -->
+                    <Button
+                        android:id="@+id/btnAddToCart2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#4CAF50"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="0dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 🍽️ Single Item Block -->
+            <LinearLayout
+                android:id="@+id/layoutItem3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="2dp">
+
+                <!-- Food Image -->
+                <ImageView
+                    android:id="@+id/itemImage3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/idlisam"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- Info & Quantity Controls -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/itemName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Idli Sambhar"
+                        android:textColor="#663399"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/itemPrice3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹32"
+                        android:textColor="#666"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Quantity Buttons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <Button
+                            android:id="@+id/btnMinus3"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="-"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>/>
+
+                        <TextView
+                            android:id="@+id/quantityText3"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <Button
+                            android:id="@+id/btnPlus3"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="+"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>/>
+                    </LinearLayout>
+                    <!-- 🛒 Add to Cart Button -->
+                    <Button
+                        android:id="@+id/btnAddToCart3"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#4CAF50"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="0dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 🍽️ Single Item Block -->
+            <LinearLayout
+                android:id="@+id/layoutItem4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="2dp">
+
+                <!-- Food Image -->
+                <ImageView
+                    android:id="@+id/itemImage4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/misalpav"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- Info & Quantity Controls -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/itemName4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Missal Pav"
+                        android:textColor="#663399"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/itemPrice4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹38"
+                        android:textColor="#666"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Quantity Buttons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <Button
+                            android:id="@+id/btnMinus4"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="-"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>/>
+
+                        <TextView
+                            android:id="@+id/quantityText4"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <Button
+                            android:id="@+id/btnPlus4"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="+"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>/>
+                    </LinearLayout>
+                    <!-- 🛒 Add to Cart Button -->
+                    <Button
+                        android:id="@+id/btnAddToCart4"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#4CAF50"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="0dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 🍽️ Single Item Block -->
+            <LinearLayout
+                android:id="@+id/layoutItem5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="2dp">
+
+                <!-- Food Image -->
+                <ImageView
+                    android:id="@+id/itemImage5"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/poha"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- Info & Quantity Controls -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/itemName5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Poha"
+                        android:textColor="#663399"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/itemPrice5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹32"
+                        android:textColor="#666"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Quantity Buttons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <Button
+                            android:id="@+id/btnMinus5"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="-"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>/>
+
+                        <TextView
+                            android:id="@+id/quantityText5"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <Button
+                            android:id="@+id/btnPlus5"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="+"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>/>
+                    </LinearLayout>
+                    <!-- 🛒 Add to Cart Button -->
+                    <Button
+                        android:id="@+id/btnAddToCart5"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#4CAF50"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="0dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 🍽️ Single Item Block -->
+            <LinearLayout
+                android:id="@+id/layoutItem6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="2dp">
+
+                <!-- Food Image -->
+                <ImageView
+                    android:id="@+id/itemImage6"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/breadpakoda"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- Info & Quantity Controls -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/itemName6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bread Pakoda"
+                        android:textColor="#663399"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/itemPrice6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹16"
+                        android:textColor="#666"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Quantity Buttons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <Button
+                            android:id="@+id/btnMinus6"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="-"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>/>
+
+                        <TextView
+                            android:id="@+id/quantityText6"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <Button
+                            android:id="@+id/btnPlus6"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="+"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>/>
+                    </LinearLayout>
+                    <!-- 🛒 Add to Cart Button -->
+                    <Button
+                        android:id="@+id/btnAddToCart6"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#4CAF50"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="0dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 🍽️ Single Item Block -->
+            <LinearLayout
+                android:id="@+id/layoutItem7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="2dp">
+
+                <!-- Food Image -->
+                <ImageView
+                    android:id="@+id/itemImage7"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/grilledsand"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- Info & Quantity Controls -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/itemName7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grilled Sandwich"
+                        android:textColor="#663399"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/itemPrice7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹55"
+                        android:textColor="#666"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Quantity Buttons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <Button
+                            android:id="@+id/btnMinus7"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="-"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>/>
+
+                        <TextView
+                            android:id="@+id/quantityText7"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:gravity="center"
+                            android:text="0" />
+
+                        <Button
+                            android:id="@+id/btnPlus7"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:text="+"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:padding="0dp"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#663399"/>/>
+                    </LinearLayout>
+                    <!-- 🛒 Add to Cart Button -->
+                    <Button
+                        android:id="@+id/btnAddToCart7"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Add to Cart"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#4CAF50"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="0dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnViewCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Cart"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FFC107"
+                android:layout_marginTop="16dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="bottom|center_horizontal" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
